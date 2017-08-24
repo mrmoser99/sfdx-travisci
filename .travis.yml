@@ -15,7 +15,8 @@ before_install:
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx update
-- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
+- sfdx force:auth:jwt:grant --clientid 3MVG9d8..z.hDcPII_BNIfrPsLj9vPqwYcAycBrtSUlhZ3WYAQdZ1dBpYnsuUEz7h.3e1.R.U2autAH5eOB3f
+ --jwtkeyfile assets/server.key --username mrmoser1@verizon.net.hub --setdefaultdevhubusername -a HubOrg
 
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg
